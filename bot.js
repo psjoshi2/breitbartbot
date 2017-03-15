@@ -5,7 +5,10 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^AYE BREITBART/;
+      reg1 = /^AYE BREITBART/,
+      reg2 = /^BREITBART/;
+  
+   var botRegex = new RegExp(reg1.source + "|" + reg2.source );
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
