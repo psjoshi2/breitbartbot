@@ -8,7 +8,7 @@ function respond() {
       reg1 = /^liberal media/,
       reg2 = /^BREITBART/;
   
-   var botRegex = new RegExp(reg1.source + "|" + reg2.source );
+   var botRegex = /^BREITBART/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
