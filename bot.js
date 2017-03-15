@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\Ryan Cyriac$/;
+      botRegex = /^\AYE BREITBART$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -22,7 +22,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "is a bitch";
+  botResponse = "BREITBART IN LARRY";
 
   options = {
     hostname: 'api.groupme.com',
@@ -36,7 +36,7 @@ function postMessage() {
     "attachments" : [
     {
       "type"  : "image",
-      "url"   : "https://i.groupme.com/640x640.jpeg.9367b2421e2b427cb9e6902be28431da"
+      "url"   : "https://i.groupme.com/830x650.jpeg.0393541e0c1a44ba9eca2a35934b8ef4"
     }
   ]
   };
