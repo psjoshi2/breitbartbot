@@ -5,10 +5,9 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      reg1 = /^liberal media/,
-      reg2 = /^BREITBART/;
+      var botRegex = /^BREITBART/;
   
-   var botRegex = /^BREITBART/;
+   
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
