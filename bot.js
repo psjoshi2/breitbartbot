@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      reg1 = /^AYE BREITBART/,
+      reg1 = /^liberal media/,
       reg2 = /^BREITBART/;
   
    var botRegex = new RegExp(reg1.source + "|" + reg2.source );
